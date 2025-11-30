@@ -85,6 +85,7 @@ This will save the model to:
 ```
 models/chest_classifier.pt
 ```
+---
 ## 🚀 Getting Started
 
 1. **Clone the repository:**
@@ -117,8 +118,8 @@ Ensure you have a GPU for faster inference
 The pipeline is modular, so agents can be updated independently
 
 Test-Time Augmentation improves robustness on unseen images
-
-📄 License
+---
+📜 License
 
 This project is licensed under the MIT License.
 
