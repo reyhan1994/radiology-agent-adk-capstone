@@ -37,7 +37,7 @@ The chest‑X‑ray images used in this project are sourced from the **COVID‑1
 **License:** CC‑BY 4.0  
 
 ---
-## 📂 Repository Structure
+## 📦 Repository Structure
 
 ```
 radiology-agent/
