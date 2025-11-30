@@ -69,6 +69,10 @@ pip install gdown
 gdown https://drive.google.com/uc?id=1NC5Qb3YLm9kj6MCzq8xsBraSlZMEpiCz -O models/chest_classifier.pt
 
 ```
+This will save the model to:
+```
+models/chest_classifier.pt
+```
 ## 🚀 Getting Started
 
 1. **Clone the repository:**
