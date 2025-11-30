@@ -27,7 +27,6 @@ This project implements a **modular AI pipeline** for automated chest X-ray anal
 ---
 
 ## 📂 Repository Structure
-
 '''
 radiology-agent/
 │
