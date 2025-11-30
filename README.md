@@ -54,6 +54,21 @@ radiology-agent/
 ├── requirements.txt              # Dependencies
 └── README.md
 ```
+📥 Download Model Weights (Required)
+
+Because GitHub restricts files larger than 25MB, the model weights (chest_classifier.pt, ~43MB) are hosted on Google Drive.
+
+You must download the weights before running the pipeline.
+
+Download link:
+👉 Download chest_classifier.pt
+
+Or download via command line:
+```
+pip install gdown
+gdown https://drive.google.com/uc?id=1NC5Qb3YLm9kj6MCzq8xsBraSlZMEpiCz -O models/chest_classifier.pt
+
+```
 ## 🚀 Getting Started
 
 1. **Clone the repository:**
