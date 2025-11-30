@@ -36,7 +36,7 @@ The chest‑X‑ray images used in this project are sourced from the **COVID‑1
 [Dataset link](https://figshare.com/articles/dataset/COVID-19_Chest_X-Ray_Image_Repository/12580328)  
 **License:** CC‑BY 4.0  
 
-
+---
 ## 📂 Repository Structure
 
 ```
