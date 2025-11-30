@@ -25,6 +25,17 @@ This project implements a **modular AI pipeline** for automated chest X-ray anal
 - Fully **modular and reproducible** pipeline  
 
 ---
+## 📂 Dataset / Images ![Dataset](https://img.shields.io/badge/Dataset-Figshare-blue)
+
+**Training Dataset (for model fine-tuning):**  
+The model was fine-tuned using the **Chest X-Ray Pneumonia dataset** from Kaggle:  
+[Dataset link](https://www.kaggle.com/datasets/paultimothymooney/chest-xray-pneumonia)
+
+**Sample Images (for pipeline demonstration):**  
+The chest‑X‑ray images used in this project are sourced from the **COVID‑19 Chest X‑Ray Image Repository**, a public dataset hosted on Figshare.  
+[Dataset link](https://figshare.com/articles/dataset/COVID-19_Chest_X-Ray_Image_Repository/12580328)  
+**License:** CC‑BY 4.0  
+
 
 ## 📂 Repository Structure
 
