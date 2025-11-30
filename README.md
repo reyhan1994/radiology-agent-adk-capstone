@@ -28,7 +28,8 @@ This project implements a **modular AI pipeline** for automated chest X-ray anal
 
 ## 📂 Repository Structure
 
-'''radiology-agent/
+"""
+radiology-agent/
 │
 ├── agents/
 │   ├── image_analysis_agent.py
@@ -49,8 +50,9 @@ This project implements a **modular AI pipeline** for automated chest X-ray anal
 ├── memory/
 │   └── patient_db.json
 │
-├── run_pipeline.py
-├── requirements.txt
+├── run_pipeline.py               # Main script to run full pipeline
+├── requirements.txt              # Dependencies
 └── README.md
-'''
+"""
+
 
