@@ -54,7 +54,8 @@ radiology-agent/
 ├── requirements.txt              # Dependencies
 └── README.md
 ```
-📥 Download Model Weights (Required)
+### 📥 **Download Model Weights (Required)**
+
 
 Because GitHub restricts files larger than 25MB, the model weights (chest_classifier.pt, ~43MB) are hosted on Google Drive.
 
