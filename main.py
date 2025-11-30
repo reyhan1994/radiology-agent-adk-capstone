@@ -5,12 +5,6 @@ import csv
 from master_agent import build_master_agent
 from agents.patient_context_agent import PatientContextAgent
 
-try:
-    from google.colab import files
-    COLAB = True
-except ImportError:
-    COLAB = False
-
 IMAGE_EXTS = {".png", ".jpg", ".jpeg", ".bmp", ".tif", ".tiff", ".dcm"}
 
 def list_images(folder):
@@ -34,7 +28,7 @@ def extract_row(image_name, artifacts):
         "memory_status": artifacts.get("memory_status", ""),
     }
 
-def process_images(input_folder, output_csv, auto_download=True):
+def process_images(input_folder, output_csv):
     imgs = list_images(input_folder)
     print("Found", len(imgs), "images")
 
@@ -55,12 +49,6 @@ def process_images(input_folder, output_csv, auto_download=True):
         writer.writeheader()
         writer.writerows(rows)
     print(f"Saved results to {output_csv}")
-
-    if COLAB and auto_download:
-        try:
-            files.download(output_csv)
-        except Exception as e:
-            print("Download failed:", e)
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
