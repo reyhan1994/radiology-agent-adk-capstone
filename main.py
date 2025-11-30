@@ -5,7 +5,6 @@ import csv
 from master_agent import build_master_agent
 from agents.patient_context_agent import PatientContextAgent
 
-# Only needed in Colab to download CSV
 try:
     from google.colab import files
     COLAB = True
@@ -35,7 +34,7 @@ def extract_row(image_name, artifacts):
         "memory_status": artifacts.get("memory_status", ""),
     }
 
-def process_images(input_folder, output_csv):
+def process_images(input_folder, output_csv, auto_download=True):
     imgs = list_images(input_folder)
     print("Found", len(imgs), "images")
 
@@ -57,9 +56,11 @@ def process_images(input_folder, output_csv):
         writer.writerows(rows)
     print(f"Saved results to {output_csv}")
 
-    # Auto-download in Colab
-    if COLAB:
-        files.download(output_csv)
+    if COLAB and auto_download:
+        try:
+            files.download(output_csv)
+        except Exception as e:
+            print("Download failed:", e)
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
