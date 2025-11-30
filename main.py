@@ -4,7 +4,8 @@ import os
 import csv
 from master_agent import build_master_agent
 from agents.patient_context_agent import PatientContextAgent
-
+import asyncio
+artifacts = asyncio.run(master.run(initial))
 
 IMAGE_EXTS = {".png", ".jpg", ".jpeg", ".bmp", ".tif", ".tiff", ".dcm"}
 
@@ -55,3 +56,8 @@ initial = {"user_request": path, "patient_data": pat_agent.run(path)}
 artifacts = master.run(initial)
 print("-> artifacts returned:", artifacts)
 rows.append(extract_row(im, artifacts))
+
+with open(output_csv, "w", newline="", encoding="utf-8") as f:
+    writer = csv.DictWriter(f, fieldnames=rows[0].keys())
+    writer.writeheader()
+    writer.writerows(rows)
