@@ -1,28 +1,34 @@
-#🩺 Radiology Agent — Capstone Project
-Project: Automated Chest X-ray Analysis with AI Agents
-Author: Reihan Alinia Lat
-Competition: Kaggle — Agents Intensive Capstone Project.
-##🔍 Overview
+# 🩺 Radiology Agent — Capstone Project
 
-This project implements a modular AI pipeline for automated chest X-ray analysis:
+**Project:** Automated Chest X-ray Analysis with AI Agents  
+**Author:** Reihan Alinia Lat  
+**Competition:** Kaggle — Agents Intensive Capstone Project  
 
-🖼 ImageAnalysisAgent — classifies X-ray images into Normal, Pneumonia, or Other.
+---
 
-📝 CodingAgent — automatically assigns ICD-10 and CPT codes.
+## 🔍 Overview
 
-📄 ReportGenerationAgent — generates patient reports with confidence scores.
+This project implements a **modular AI pipeline** for automated chest X-ray analysis. The system leverages deep learning and agent-based architecture to classify X-rays, assign medical codes, and generate patient reports.
 
-Highlights:
+### Agents:
 
-Fine-tuned ResNet18 backbone
+- **🖼 ImageAnalysisAgent** — Classifies X-ray images into `Normal`, `Pneumonia`, or `Other`.
+- **📝 CodingAgent** — Automatically assigns ICD-10 and CPT codes.
+- **📄 ReportGenerationAgent** — Generates patient reports with confidence scores.
+- **💾 MemoryAgent** — Maintains patient history and previous analysis results.
 
-Thresholding for low-confidence predictions (Other)
+### Highlights:
 
-Test-Time Augmentation (TTA) for robust results
+- Fine-tuned **ResNet18** backbone  
+- Thresholding for low-confidence predictions (`Other`)  
+- **Test-Time Augmentation (TTA)** for robust results  
+- Fully **modular and reproducible** pipeline  
 
-Fully modular and reproducible pipeline
+---
 
-##📂 Repository Structure
+## 📂 Repository Structure
+
+
 '''
 radiology-agent/
 │
