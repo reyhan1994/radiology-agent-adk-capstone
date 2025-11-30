@@ -3,11 +3,13 @@ import argparse
 import os
 import csv
 import asyncio
+import nest_asyncio
 from master_agent import build_master_agent
 from agents.patient_context_agent import PatientContextAgent
 
-IMAGE_EXTS = {".png", ".jpg", ".jpeg", ".bmp", ".tif", ".tiff", ".dcm"}
+nest_asyncio.apply()  
 
+IMAGE_EXTS = {".png", ".jpg", ".jpeg", ".bmp", ".tif", ".tiff", ".dcm"}
 
 def list_images(folder):
     names = []
@@ -16,7 +18,6 @@ def list_images(folder):
         if ext in IMAGE_EXTS:
             names.append(fn)
     return names
-
 
 def extract_row(image_name, artifacts):
     analysis = artifacts.get("analysis_findings") or {}
@@ -30,7 +31,6 @@ def extract_row(image_name, artifacts):
         "CPT": coding.get("CPT", "") or coding.get("CPT_Code", ""),
         "memory_status": artifacts.get("memory_status", ""),
     }
-
 
 async def process_images(input_folder, output_csv):
     imgs = list_images(input_folder)
@@ -54,11 +54,11 @@ async def process_images(input_folder, output_csv):
         writer.writerows(rows)
     print(f"Saved results to {output_csv}")
 
-
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("--input", type=str, required=True, help="Input folder with images")
     parser.add_argument("--output", type=str, required=True, help="Output CSV file")
     args = parser.parse_args()
 
+    
     asyncio.run(process_images(args.input, args.output))
