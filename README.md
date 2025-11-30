@@ -61,7 +61,8 @@ Because GitHub restricts files larger than 25MB, the model weights (chest_classi
 You must download the weights before running the pipeline.
 
 Download link:
-👉 ### 📥 Download Model Weights
+👉👉 **[Download chest_classifier.pt](https://drive.google.com/file/d/1NC5Qb3YLm9kj6MCzq8xsBraSlZMEpiCz/view?usp=drive_link)**
+
 
 👉 [Download chest_classifier.pt](https://drive.google.com/file/d/1NC5Qb3YLm9kj6MCzq8xsBraSlZMEpiCz/view?usp=drive_link)
 
