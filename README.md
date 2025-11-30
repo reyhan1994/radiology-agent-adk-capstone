@@ -54,5 +54,23 @@ radiology-agent/
 ├── requirements.txt              # Dependencies
 └── README.md
 ```
+📈 Results
 
+Accurate classification of chest X-rays
+
+Automatic ICD-10 & CPT coding
+
+Clear and concise patient reports with confidence scores
+
+⚡ Notes
+
+Ensure you have a GPU for faster inference
+
+The pipeline is modular, so agents can be updated independently
+
+Test-Time Augmentation improves robustness on unseen images
+
+📄 License
+
+This project is licensed under the MIT License.
 
