@@ -59,8 +59,8 @@ radiology-agent/
 1. **Clone the repository:**
 
 ```bash
-git clone https://github.com/your-username/radiology-agent.git
-cd radiology-agent
+!git clone https://github.com/your-username/radiology-agent-adk-capstone.git
+%cd radiology-agent-adk-capstone
 ```
 2.Install dependencies:
 ```
