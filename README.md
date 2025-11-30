@@ -63,10 +63,12 @@ git clone https://github.com/your-username/radiology-agent.git
 cd radiology-agent
 ```
 2.Install dependencies:
-```pip install -r requirements.txt
+```
+pip install -r requirements.txt
 ```
 3.Run the pipeline on a sample image:
-```!PYTHONPATH=. python main.py --input sample_images --output submission.csv
+```
+!PYTHONPATH=. python main.py --input sample_images --output submission.csv
 ```
 
 📈 Results
