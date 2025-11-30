@@ -1,8 +1,8 @@
-🩺 Radiology Agent — Capstone Project
+#🩺 Radiology Agent — Capstone Project
 Project: Automated Chest X-ray Analysis with AI Agents
 Author: Reihan Alinia Lat
 Competition: Kaggle — Agents Intensive Capstone Project.
-🔍 Project Overview
+##🔍 Overview
 
 This project implements a modular AI pipeline for automated chest X-ray analysis:
 
@@ -22,8 +22,8 @@ Test-Time Augmentation (TTA) for robust results
 
 Fully modular and reproducible pipeline
 
-📂 Repository Structure
-"""
+##📂 Repository Structure
+'''
 radiology-agent/
 │
 ├── agents/
@@ -48,5 +48,5 @@ radiology-agent/
 ├── run_pipeline.py
 ├── requirements.txt
 └── README.md
-"""
+'''
 
