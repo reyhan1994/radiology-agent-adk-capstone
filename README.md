@@ -23,7 +23,7 @@ Test-Time Augmentation (TTA) for robust results
 Fully modular and reproducible pipeline
 
 📂 Repository Structure
-'''
+"""
 radiology-agent/
 │
 ├── agents/
@@ -33,12 +33,20 @@ radiology-agent/
 │   └── memory_agent.py
 │
 ├── models/
-│   └── chest_classifier.pt  # Fine-tuned ResNet18 weights
+│   └── chest_classifier.pt       # Fine-tuned ResNet18 weights
 │
-├── sample_images/           # Example X-ray images
-├── utils/                   # Preprocessing & I/O helpers
-├── memory/                  # Optional patient database
-├── run_pipeline.py          # Run the full pipeline
-├── requirements.txt         # Python dependencies
+├── sample_images/                # Example X-ray images
+│   └── README.md
+│
+├── utils/
+│   ├── preprocessing.py
+│   └── io_utils.py
+│
+├── memory/
+│   └── patient_db.json
+│
+├── run_pipeline.py
+├── requirements.txt
 └── README.md
-'''
+"""
+
