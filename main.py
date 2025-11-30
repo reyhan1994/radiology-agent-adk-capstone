@@ -54,4 +54,4 @@ print("Processing:", path)
 initial = {"user_request": path, "patient_data": pat_agent.run(path)}
 artifacts = master.run(initial)
 print("-> artifacts returned:", artifacts)
-rows.append(extract_ro
+rows.append(extract_row(im, artifacts))
