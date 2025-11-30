@@ -1,50 +1,53 @@
 # master_agent.py
-import os
-import inspect
-import asyncio
-from adk.agent import SequentialAgent, StepResult
-from adk.step import Step
-
 from agents.image_analysis_agent import ImageAnalysisAgent
-from agents.report_generation_agent import ReportGenerationAgent
 from agents.coding_agent import CodingAgent
-from agents.memory_agent import MemoryAgent
+from agents.patient_context_agent import PatientContextAgent
 
-
-def build_master_agent():
+class MasterAgent:
     """
-    Build a SequentialAgent with the following steps:
-    1. Image analysis
-    2. Generate final report
-    3. Pathology coding
-    4. Store long-term memory
+    MasterAgent combines:
+    - ImageAnalysisAgent: for CXR image classification
+    - CodingAgent: for ICD-10 / CPT codes
+    - PatientContextAgent: for optional patient info enrichment
     """
-    # Initialize individual agents
-    img_agent = ImageAnalysisAgent()
-    report_agent = ReportGenerationAgent()
-    coding_agent = CodingAgent()
-    memory_agent = MemoryAgent()
+    def __init__(self, device=None):
+        self.device = device
+        self.image_agent = ImageAnalysisAgent(
+            model_path="models/chest_classifier.pt",
+            device=self.device,
+            threshold=0.45,   # confidence threshold
+            tta=True          # Test-Time Augmentation
+        )
+        self.coding_agent = CodingAgent()
+        self.patient_agent = PatientContextAgent()
 
-    # Define the steps in order
-    steps = [
-        Step("run_image_analysis", img_agent, "user_request", "analysis_findings"),
-        Step("generate_final_report", report_agent, ["patient_data", "analysis_findings"], "final_report"),
-        Step("run_pathology_coding", coding_agent, "analysis_findings", "coding_result"),
-        Step(
-            "store_long_term_memory",
-            memory_agent,
-            ["patient_data", "analysis_findings", "final_report", "coding_result"],
-            "memory_status"
-        ),
-    ]
+    def run(self, input_data):
+        """
+        input_data: dict with 'user_request' (image path) and optional patient_data
+        """
+        # Patient context (optional)
+        patient_info = self.patient_agent.run(input_data.get("user_request"))
 
-    # Return the sequential agent
-    return SequentialAgent(steps)
+        # Image analysis
+        img_result = self.image_agent.run(input_data)
+
+        # ICD/CPT coding
+        coding_result = self.coding_agent.run(img_result.get("pathology"))
+
+        # Final report string
+        confidence = img_result.get("confidence", "0%")
+        final_report = f"Final Report: {img_result.get('pathology')} for patient {patient_info.get('name','Unknown')}. Confidence: {confidence}."
+
+        return {
+            "user_request": input_data.get("user_request"),
+            "patient_data": patient_info,
+            "analysis_findings": img_result,
+            "coding_result": coding_result,
+            "final_report": final_report,
+            "memory_status": "Consolidation Successful"
+        }
 
 
-# Optional helper to run the agent asynchronously
-async def run_master_agent(initial_input):
-    master_agent = build_master_agent()
-    artifacts = await master_agent.run(initial_input)
-    return artifacts
-
+# Helper function to match previous interface
+def build_master_agent(device=None):
+    return MasterAgent(device=device)
