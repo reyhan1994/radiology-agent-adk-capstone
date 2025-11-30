@@ -63,10 +63,6 @@ You must download the weights before running the pipeline.
 Download link:
 👉👉 **[Download chest_classifier.pt](https://drive.google.com/file/d/1NC5Qb3YLm9kj6MCzq8xsBraSlZMEpiCz/view?usp=drive_link)**
 
-
-👉 [Download chest_classifier.pt](https://drive.google.com/file/d/1NC5Qb3YLm9kj6MCzq8xsBraSlZMEpiCz/view?usp=drive_link)
-
-
 Or download via command line:
 ```
 pip install gdown
