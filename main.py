@@ -21,7 +21,7 @@ def extract_row(image_name, artifacts):
     return {
         "image": image_name,
         "analysis_pathology": analysis.get("pathology", ""),
-        "analysis_confidence": analysis.get("confidence", ""),
+        "analysis_confidence": f"{analysis.get('confidence', 0.0):.2f}",
         "final_report": artifacts.get("final_report", ""),
         "ICD_10": coding.get("ICD_10", "") or coding.get("ICD_10_Code", ""),
         "CPT": coding.get("CPT", "") or coding.get("CPT_Code", ""),
