@@ -119,15 +119,20 @@ weights_path = "models/chest_classifier.pt"
 
 ### ☁️ Run on Google Colab
 
-You can run the **full chest X-ray analysis pipeline** directly using the uploaded notebook:
+You can run the **full chest X-ray analysis pipeline** directly on Google Colab using the uploaded notebook (`run_colab.ipynb`):
 
 [🔗 Open `run_colab.ipynb` in Colab](https://github.com/reyhan1994/radiology-agent-adk-capstone/blob/main/run_colab.ipynb)
 
-> ⚡ **Note:** The notebook handles all setup steps automatically:
-> - 📥 Downloading datasets  
-> - 📦 Installing dependencies  
-> - 💾 Mounting Google Drive  
-> - 🏋️‍♂️ Loading the fine-tuned ResNet-18 model  
+### ✅ Features / Steps Handled
+- ⚡ **Check GPU availability**  
+- 📂 **Clone the repository**  
+- 📦 **Install dependencies**  
+- 🔑 **Set up Kaggle API credentials**  
+- 🩺 **Download the Chest X-ray Pneumonia dataset**  
+- 💾 **Mount Google Drive** to load/save model weights  
+- 🏋️‍♂️ **Load the fine-tuned ResNet-18 model**  
+- 🖼 **Run inference on sample images**  
+- 📝 **Generate a CSV submission file**
 
 > ✅ **Important:** You **only need to provide your own Kaggle username and API key** to access the datasets.
 
@@ -147,7 +152,7 @@ The project uses a **ResNet-18** model pretrained on **ImageNet**.
 - Optimizer: **AdamW**  
 - Input normalization: **ImageNet normalization**  
 - Loss function: **Weighted cross-entropy** (used if needed)
-- 
+ 
 📈 Results
 
 Accurate classification of chest X-rays
