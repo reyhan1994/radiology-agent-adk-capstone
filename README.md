@@ -12,7 +12,7 @@ This repository presents a multi-agent radiology analysis system designed for au
 
 The pipeline integrates deep learning with modular, autonomous agents—each responsible for a specific clinical task.
 
-Unlike traditional single-model workflows, this project highlights Agentic AI, the core theme of the Kaggle Capstone
+Unlike traditional single-model workflows, this project highlights Agentic AI, the core theme of the Kaggle Capstone.
 
 ### 🤖 Agent Architecture
 
@@ -31,25 +31,16 @@ Unlike traditional single-model workflows, this project highlights Agentic AI, t
 ---
 ## 📂 Dataset / Images ![Dataset](https://img.shields.io/badge/Dataset-Figshare-blue)
 
-**Training Dataset (for model fine-tuning):**  
+### **🧰 Training Dataset (for model fine-tuning)**
 The model was fine-tuned using the **Chest X-Ray Pneumonia dataset** from Kaggle:  
-[Dataset link](https://www.kaggle.com/datasets/paultimothymooney/chest-xray-pneumonia)
+[🔗 Dataset link](https://www.kaggle.com/datasets/paultimothymooney/chest-xray-pneumonia)
 
-How to use the dataset:
+You can download it either:  
+- **Manually**, or  
+- **Automatically** using the Kaggle API
 
-Manual download: Download the dataset from Kaggle and upload it to your Colab or local machine.
+**Kaggle API setup example:**
 
-Optional Kaggle API download: If you prefer, you can download directly using the Kaggle API (requires your own API key
-Setting up Kaggle API Credentials:
-To download datasets or submit to Kaggle using this notebook, you need to provide your Kaggle API credentials.
-
-1.Go to your Kaggle account and create an API token. This will download a file named kaggle.json.
-
-2.Place kaggle.json in your Colab environment at:
-```
-/root/.kaggle/kaggle.json
-```
-3.Example structure in the notebook:
 ```
 kaggle_json = {
     "username": "<YOUR_KAGGLE_USERNAME>",
