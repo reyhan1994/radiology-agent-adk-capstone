@@ -167,6 +167,7 @@ Make sure the model weights are uploaded to the specified Google Drive path.
 The script uses the same image transformations as during training to ensure consistency.
 
 Works with GPU if available.
+
 ---
 📈 Results
 
