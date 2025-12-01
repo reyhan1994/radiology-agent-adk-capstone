@@ -73,18 +73,25 @@ Because GitHub restricts files larger than 25MB, the model weights (chest_classi
 You must download the weights before running the pipeline.
 
 Download link:
-👉👉 **[Download chest_classifier.pt](https://drive.google.com/file/d/1NC5Qb3YLm9kj6MCzq8xsBraSlZMEpiCz/view?usp=drive_link)**
+👉👉 **[Download chest_classifier.pt](https://drive.google.com/file/d/1mDpUmGjR5OKXodd8DxFJVsR-iMsrPuIb/view?usp=drive_link)**
 
 Or download via command line:
 ```
 pip install gdown
-gdown https://drive.google.com/uc?id=1NC5Qb3YLm9kj6MCzq8xsBraSlZMEpiCz -O models/chest_classifier.pt
+mkdir -p models
+gdown https://drive.google.com/uc?id=1mDpUmGjR5OKXodd8DxFJVsR-iMsrPuIb -O models/chest_classifier.pt
+
 
 ```
 This will save the model to:
 ```
 models/chest_classifier.pt
 ```
+Make sure this path matches the one used in your code:
+```
+weights_path = "models/chest_classifier.pt"
+```
+
 ---
 ## 🚀 Getting Started
 
