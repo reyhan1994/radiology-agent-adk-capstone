@@ -10,7 +10,7 @@
 
 This project implements a **modular AI pipeline** for automated chest X-ray analysis. The system leverages deep learning and agent-based architecture to classify X-rays, assign medical codes, and generate patient reports.
 
-### Agents:
+### 🤖 Agent Architecture
 
 - **🖼 ImageAnalysisAgent** — Classifies X-ray images into `Normal`, `Pneumonia`, or `Other`.
 - **📝 CodingAgent** — Automatically assigns ICD-10 and CPT codes.
