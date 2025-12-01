@@ -175,6 +175,7 @@ This project goes beyond a standard classifier by demonstrating an **agentic wor
 -*Agentic workflow understanding*
 
 By combining these elements, the project showcases how **AI systems can be designed to handle complex diagnostic workflows** in a structured and scalable way.
+
 ---
 
 ## 🚀 Getting Started
