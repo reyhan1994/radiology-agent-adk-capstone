@@ -15,7 +15,7 @@ class MasterAgent:
 
        
         self.image_agent = ImageAnalysisAgent(
-            model_path="models/chest_classifier.pt",
+            model_path="/content/drive/MyDrive/radiology_agent/models/chest_classifier.pt"
             device=self.device,
             threshold=0.45,
             tta=True
