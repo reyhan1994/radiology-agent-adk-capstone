@@ -164,7 +164,11 @@ This project goes beyond a standard classifier by demonstrating an **agentic wor
 - ✔ **Task delegation** — each agent focuses on specialized tasks  
 - ✔ **Memory-based state handling** — preserves context across the pipeline  
 - ✔ **Modular diagnostic pipeline** — components can be updated or replaced independently  
-- ✔ **Realistic radiology workflow** — closely resembles clinical systems  
+- ✔ **Realistic radiology workflow** — closely resembles clinical systems
+
+  This repository evaluates both:  
+-*Technical ML execution*, and  
+-*Agentic workflow understanding*
 
 By combining these elements, the project showcases how **AI systems can be designed to handle complex diagnostic workflows** in a structured and scalable way.
 ---
