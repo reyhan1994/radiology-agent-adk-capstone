@@ -36,7 +36,7 @@ radiology-agent-adk-capstone/
 │   ├── coding_agent.py
 │   ├── report_generation_agent.py
     ├── memory_agent.py
-│   └── PatientContextAgent
+│   └── PatientContextAgent.py
 │
 ├── master_agent.py             ← Orchestrator
 ├── main.py                    ← CLI / script runner
@@ -108,7 +108,29 @@ The project uses a **ResNet-18** model pretrained on **ImageNet**.
 - **📄 ReportGenerationAgent** — Generates patient reports with confidence scores.
 - **💾 MemoryAgent** — Maintains patient history and previous analysis results.
 -  🧩 **PatientContextAgent** — Provides patient metadata (ID, name, age) for each request.
-- 🎛 **MasterAgent** — Orchestrates the interaction between all agents for streamlined processing. 
+- 🎛 **MasterAgent** — Orchestrates the interaction between all agents for streamlined processing.
+```
+                     ┌─────────────────────────┐
+                     │      MasterAgent        │
+                     └──────────┬─────────────┘
+                                │
+          ┌─────────────────────┼─────────────────────┐
+          ▼                     ▼                     ▼
+   ┌───────────────┐    ┌────────────────┐    ┌──────────────────────┐
+   │ ImageAnalysis │    │   CodingAgent  │    │ ReportGenerationAgent│
+   └───────────────┘    └────────────────┘    └──────────────────────┘
+                                │
+                                ▼
+                        ┌───────────────┐
+                        │ MemoryAgent   │
+                        └───────────────┘
+                                │
+                                ▼
+                        ┌────────────────────┐
+                        │ PatientContextAgent│
+                        └────────────────────┘
+```
+   
  ---
  
 
