@@ -48,6 +48,8 @@ radiology-agent-adk-capstone/
 ├── sample_images/             ← example X-ray inputs
 ├── memory/                    ← for patient-history JSON
 │   └── patient_db.json
+├── outputs/              
+│   └── submission.csv
 ├── requirements.txt
 └── README.md
 ```
