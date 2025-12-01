@@ -52,10 +52,11 @@ kaggle_json = {
 
 ### 🖼 Sample Images (for pipeline demonstration)
 
-The chest X-ray images used in this project are sourced from the **COVID‑19 Chest X‑Ray Image Repository**, a public dataset hosted on Figshare.  
+The chest X-ray images used in this project are included in the repository under the `sample_images/` folder.  
 
+These images are sourced from the **COVID‑19 Chest X‑Ray Image Repository**, a public dataset hosted on Figshare:  
 - **Dataset link:** [🔗 COVID‑19 Chest X‑Ray Image Repository](https://figshare.com/articles/dataset/COVID-19_Chest_X-Ray_Image_Repository/12580328)  
-- **License:** CC‑BY 4.0 
+- **License:** CC‑BY 4.0
 
 ---
 ## 📦 Repository Structure
