@@ -6,6 +6,7 @@
 **Project:** Automated Chest X-ray Analysis with AI Agents  
 **Author:** Reihan Alinia Lat  
 **Competition:** *Kaggle — Agents Intensive Capstone Project*
+
 <img src="Demoimage/55.png" alt="Agent Architecture" width="500"/>
 
 
