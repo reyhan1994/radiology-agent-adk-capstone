@@ -121,7 +121,7 @@ weights_path = "models/chest_classifier.pt"
 
 You can run the **full chest X-ray analysis pipeline** directly using the uploaded notebook:
 
-[🔗 Open `run_colab.ipynb` in Colab](https://github.com/your-username/radiology-agent-adk-capstone/blob/main/run_colab.ipynb)
+[🔗 Open `run_colab.ipynb` in Colab](https://github.com/reyhan1994/radiology-agent-adk-capstone/blob/main/run_colab.ipynb)
 
 > ⚡ **Note:** The notebook handles all setup steps automatically:
 > - 📥 Downloading datasets  
