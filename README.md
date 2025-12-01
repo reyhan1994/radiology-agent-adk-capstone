@@ -86,17 +86,17 @@ radiology-agent-adk-capstone/
 ├── requirements.txt
 └── README.md
 ```
-### 📥 **Download Model Weights (Required)**
+### 📥 Download Model Weights (Required)
 
+GitHub restricts files larger than 25MB, so the model weights (**chest_classifier.pt**, ~43MB) are hosted on **Google Drive**.  
+You **must download the weights** before running the pipeline.
 
-Because GitHub restricts files larger than 25MB, the model weights (chest_classifier.pt, ~43MB) are hosted on Google Drive.
+#### 🔹 Options to download:
 
-You must download the weights before running the pipeline.
+1. **Via browser:**  
+   👉 [Download chest_classifier.pt](https://drive.google.com/file/d/1mDpUmGjR5OKXodd8DxFJVsR-iMsrPuIb/view?usp=drive_link)
 
-Download link:
-👉👉 **[Download chest_classifier.pt](https://drive.google.com/file/d/1mDpUmGjR5OKXodd8DxFJVsR-iMsrPuIb/view?usp=drive_link)**
-
-Or download via command line:
+2. **Via command line:**
 ```
 pip install gdown
 mkdir -p models
@@ -166,6 +166,22 @@ The script uses the same image transformations as during training to ensure cons
 Works with GPU if available.
 
 ---
+
+## 📈 Model
+
+The project uses a **ResNet-18** model pretrained on **ImageNet**.  
+
+### 🔹 Architecture
+- Final fully-connected (FC) layer modified to predict:
+  - **Normal**
+  - **Pneumonia**
+  - **Other**
+
+### 🔹 Training Details
+- Optimizer: **AdamW**  
+- Input normalization: **ImageNet normalization**  
+- Loss function: **Weighted cross-entropy** (used if needed)
+- 
 📈 Results
 
 Accurate classification of chest X-rays
