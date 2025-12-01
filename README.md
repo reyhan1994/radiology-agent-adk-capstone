@@ -62,7 +62,7 @@ These images are sourced from the **COVID‑19 Chest X‑Ray Image Repository**,
 ## 📦 Repository Structure
 
 ```
-radiology-agent/
+radiology-agent-adk-capstone/
 │
 ├── agents/
 │   ├── image_analysis_agent.py
@@ -70,21 +70,17 @@ radiology-agent/
 │   ├── report_generation_agent.py
 │   └── memory_agent.py
 │
-├── models/
-│   └── chest_classifier.pt       # Fine-tuned ResNet18 weights
-│
-├── sample_images/                # Example X-ray images
-│   └── README.md
-│
-├── utils/
-│   ├── preprocessing.py
-│   └── io_utils.py
-│
-├── memory/
+├── master_agent.py
+├── main.py                    ← CLI / script runner
+├── run_colab.ipynb         ← Colab/ Notebook for full inference & submission
+├── training/
+│   └── train_model.py         ← optional: fine‑tuning from scratch
+├── models/                    ← contains / expects pretrained weights
+│   └── chest_classifier.pt
+├── sample_images/             ← example X-ray inputs
+├── memory/                    ← for patient-history JSON
 │   └── patient_db.json
-│
-├── run_pipeline.py               # Main script to run full pipeline
-├── requirements.txt              # Dependencies
+├── requirements.txt
 └── README.md
 ```
 ### 📥 **Download Model Weights (Required)**
