@@ -72,9 +72,9 @@ radiology-agent-adk-capstone/
 │
 ├── master_agent.py
 ├── main.py                    ← CLI / script runner
-├── run_colab.ipynb         ← Colab/ Notebook for full inference & submission
+├── run_colab.ipynb         ← Colab/ Notebook for full inference 
 ├── training/
-│   └── train_model.py         ← optional: fine‑tuning from scratch
+│   └── train_finetune_colab.ipynb         ← optional: fine‑tuning from scratch
 ├── models/                    ← contains / expects pretrained weights
 │   └── chest_classifier.pt
 ├── sample_images/             ← example X-ray inputs
