@@ -120,7 +120,7 @@ You **must download the weights** before running the pipeline.
 #### 🔹 Options to download:
 
 1. **Via browser:**  
-   👉 [Download chest_classifier.pt](https://drive.google.com/file/d/1mDpUmGjR5OKXodd8DxFJVsR-iMsrPuIb/view?usp=drive_link)
+   👉 [Download chest_classifier.pt](https://drive.google.com/file/d/1mDpUmGjR5OKXodd8DxFJVsR-iMsrPuIb/view?usp=sharing)
 
 2. **Via command line:**
 ```
