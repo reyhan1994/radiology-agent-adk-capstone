@@ -70,7 +70,7 @@ radiology-agent-adk-capstone/
 │   ├── report_generation_agent.py
 │   └── memory_agent.py
 │
-├── master_agent.py
+├── master_agent.py             ← Orchestrator
 ├── main.py                    ← CLI / script runner
 ├── run_colab.ipynb         ← Colab/ Notebook for full inference 
 ├── training/
