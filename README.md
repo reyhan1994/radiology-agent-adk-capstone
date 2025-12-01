@@ -20,6 +20,7 @@ Unlike traditional single-model workflows, this project highlights Agentic AI, t
 - **📝 CodingAgent** — Automatically assigns ICD-10 and CPT codes.
 - **📄 ReportGenerationAgent** — Generates patient reports with confidence scores.
 - **💾 MemoryAgent** — Maintains patient history and previous analysis results.
+- **🎛 MasterAgent **— Orchestrates the interaction between all agents for streamlined processing.
 
 ### Highlights:
 
