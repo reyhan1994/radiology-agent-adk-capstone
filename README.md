@@ -114,56 +114,22 @@ weights_path = "models/chest_classifier.pt"
 ```
 
 ---
+
 ## 🚀 Getting Started
 
-1. **Clone the repository:**
+### ☁️ Run on Google Colab
 
-```bash
-!git clone https://github.com/your-username/radiology-agent-adk-capstone.git
-%cd radiology-agent-adk-capstone
-```
-2.Install dependencies:
-```
-pip install -r requirements.txt
-```
-3.Run the pipeline on a sample image:
-```
-!PYTHONPATH=. python main.py --input sample_images --output submission.csv
-```
-## 🚀 Run Pipeline on Google Colab
-The `run_colab.py` script allows you to **run the full chest X-ray analysis pipeline** on Google Colab with **pre-trained/fine-tuned weights** stored in Google Drive. It handles:
-- Checking GPU availability
-- Cloning the repository
-- Installing dependencies
-- Setting up Kaggle API credentials
-- Downloading the Chest X-ray Pneumonia dataset
-- Mounting Google Drive to load/save model weights
-- Loading the fine-tuned ResNet18 model
-- Running inference on sample images
-- Generating a CSV submission file
+You can run the **full chest X-ray analysis pipeline** directly using the uploaded notebook:
 
-### How to Use
+[🔗 Open `run_colab.ipynb` in Colab](https://github.com/your-username/radiology-agent-adk-capstone/blob/main/run_colab.ipynb)
 
-1. Open the notebook or Colab session.
-2. Ensure you have your Kaggle credentials set as environment variables:
+> ⚡ **Note:** The notebook handles all setup steps automatically:
+> - 📥 Downloading datasets  
+> - 📦 Installing dependencies  
+> - 💾 Mounting Google Drive  
+> - 🏋️‍♂️ Loading the fine-tuned ResNet-18 model  
 
-```python
-os.environ["KAGGLE_USERNAME"] = "<YOUR_KAGGLE_USERNAME>"
-os.environ["KAGGLE_KEY"] = "<YOUR_KAGGLE_KEY>"
-```
-3.Run the script:
-```
-!python run_colab.py
-```
-The predictions CSV (submission.csv) will be generated and can be downloaded locally. The fine-tuned model weights will be loaded automatically from your Google Drive path:
-/content/drive/MyDrive/radiology_agent/models/chest_classifier.pt
-⚡ Notes
-
-Make sure the model weights are uploaded to the specified Google Drive path.
-
-The script uses the same image transformations as during training to ensure consistency.
-
-Works with GPU if available.
+> ✅ **Important:** You **only need to provide your own Kaggle username and API key** to access the datasets.
 
 ---
 
