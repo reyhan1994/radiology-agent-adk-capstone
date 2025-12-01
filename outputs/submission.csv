@@ -1,0 +1,11 @@
+image,analysis_pathology,analysis_confidence,final_report,ICD_10,CPT,memory_status
+005.jpeg,Pneumonia,1.00,Final Report: Pneumonia for patient Ali Ahmadi. Confidence: 1.00.,J18.9,71046,Consolidation Successful
+011.jpeg,Pneumonia,0.90,Final Report: Pneumonia for patient Ali Ahmadi. Confidence: 0.90.,J18.9,71046,Consolidation Successful
+031.png,Pneumonia,1.00,Final Report: Pneumonia for patient Ali Ahmadi. Confidence: 1.00.,J18.9,71046,Consolidation Successful
+042.png,Normal,0.58,Final Report: Normal for patient Ali Ahmadi. Confidence: 0.58.,Z00.00,71047,Consolidation Successful
+059.jpeg,Pneumonia,1.00,Final Report: Pneumonia for patient Ali Ahmadi. Confidence: 1.00.,J18.9,71046,Consolidation Successful
+115.jpeg,Pneumonia,0.98,Final Report: Pneumonia for patient Ali Ahmadi. Confidence: 0.98.,J18.9,71046,Consolidation Successful
+642.png,Pneumonia,1.00,Final Report: Pneumonia for patient Ali Ahmadi. Confidence: 1.00.,J18.9,71046,Consolidation Successful
+778.jpg,Pneumonia,0.91,Final Report: Pneumonia for patient Ali Ahmadi. Confidence: 0.91.,J18.9,71046,Consolidation Successful
+83.jpeg,Pneumonia,1.00,Final Report: Pneumonia for patient Ali Ahmadi. Confidence: 1.00.,J18.9,71046,Consolidation Successful
+895.jpg,Pneumonia,0.99,Final Report: Pneumonia for patient Ali Ahmadi. Confidence: 0.99.,J18.9,71046,Consolidation Successful
