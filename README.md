@@ -123,12 +123,12 @@ You **must download the weights** before running the pipeline.
    👉 [Download chest_classifier.pt](https://drive.google.com/file/d/1mDpUmGjR5OKXodd8DxFJVsR-iMsrPuIb/view?usp=sharing)
 
 2. **Via command line:**
+
+Via command line / Colab:
 ```
 pip install gdown
 mkdir -p models
 gdown https://drive.google.com/uc?id=1mDpUmGjR5OKXodd8DxFJVsR-iMsrPuIb -O models/chest_classifier.pt
-
-
 ```
 This will save the model to:
 ```
