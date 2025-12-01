@@ -31,6 +31,30 @@ This project implements a **modular AI pipeline** for automated chest X-ray anal
 The model was fine-tuned using the **Chest X-Ray Pneumonia dataset** from Kaggle:  
 [Dataset link](https://www.kaggle.com/datasets/paultimothymooney/chest-xray-pneumonia)
 
+How to use the dataset:
+
+Manual download: Download the dataset from Kaggle and upload it to your Colab or local machine.
+
+Optional Kaggle API download: If you prefer, you can download directly using the Kaggle API (requires your own API key
+Setting up Kaggle API Credentials:
+To download datasets or submit to Kaggle using this notebook, you need to provide your Kaggle API credentials.
+
+1.Go to your Kaggle account and create an API token. This will download a file named kaggle.json.
+
+2.Place kaggle.json in your Colab environment at:
+```
+/root/.kaggle/kaggle.json
+```
+3.Example structure in the notebook:
+```
+kaggle_json = {
+    "username": "<YOUR_KAGGLE_USERNAME>",
+    "key": "<YOUR_KAGGLE_KEY>"
+}
+
+```
+
+
 **Sample Images (for pipeline demonstration):**  
 The chest‑X‑ray images used in this project are sourced from the **COVID‑19 Chest X‑Ray Image Repository**, a public dataset hosted on Figshare.  
 [Dataset link](https://figshare.com/articles/dataset/COVID-19_Chest_X-Ray_Image_Repository/12580328)  
