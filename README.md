@@ -8,7 +8,11 @@
 
 ## 🔍 Overview
 
-This project implements a **modular AI pipeline** for automated chest X-ray analysis. The system leverages deep learning and agent-based architecture to classify X-rays, assign medical codes, and generate patient reports.
+This repository presents a multi-agent radiology analysis system designed for automated chest X-ray interpretation.
+
+The pipeline integrates deep learning with modular, autonomous agents—each responsible for a specific clinical task.
+
+Unlike traditional single-model workflows, this project highlights Agentic AI, the core theme of the Kaggle Capstone
 
 ### 🤖 Agent Architecture
 
