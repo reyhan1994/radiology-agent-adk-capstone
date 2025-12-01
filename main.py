@@ -2,6 +2,7 @@
 import argparse
 import os
 import csv
+import shutil
 from master_agent import build_master_agent
 from agents.patient_context_agent import PatientContextAgent
 
